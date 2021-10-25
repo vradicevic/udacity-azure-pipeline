@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/azure_pipelines_exercise/starter_files/boston_housing_prediction.joblib
+HostUrl=https://raw.githubusercontent.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/master/C2-AgileDevelopmentwithAzure/azure_pipelines_exercise/starter_files/boston_housing_prediction.joblib
