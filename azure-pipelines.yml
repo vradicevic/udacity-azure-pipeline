@@ -32,7 +32,6 @@ stages:
   - job: BuildJob
     pool:
       vmImage: $(vmImageName)
-    cancelTimeoutInMinutes: 
     steps:
     - task: UsePythonVersion@0
       inputs:
