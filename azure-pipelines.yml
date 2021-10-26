@@ -30,7 +30,9 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: Vmss
+    pool:
+      vmImage: $(vmImageName)
+    cancelTimeoutInMinutes: 
     steps:
     - task: UsePythonVersion@0
       inputs:
@@ -65,7 +67,8 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: DeploymentJob
-    pool: Vmss
+    pool:
+      vmImage: $(vmImageName)
     environment: $(environmentName)
     strategy:
       runOnce:
