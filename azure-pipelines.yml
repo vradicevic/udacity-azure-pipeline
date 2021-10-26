@@ -32,13 +32,7 @@ stages:
   - job: BuildJob
     pool: Vmss
     steps:
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '$(pythonVersion)'
-        addToPath: true
-        architecture: 'x64'
-      displayName: 'Use Python $(pythonVersion)'
-
+    
     - script: |
         python -m venv antenv
         source antenv/bin/activate
@@ -73,13 +67,6 @@ stages:
       runOnce:
         deploy:
           steps:
-
-          - task: UsePythonVersion@0
-            inputs:
-              versionSpec: '$(pythonVersion)'
-              addToPath: true
-              architecture: 'x64'
-            displayName: 'Use Python version'
 
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : my-app-service'
