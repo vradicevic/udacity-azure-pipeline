@@ -35,6 +35,8 @@ stages:
     - task: UsePythonVersion@0
       inputs:
         versionSpec: '$(pythonVersion)'
+        addToPath: true
+        architecture: 'x64'
       displayName: 'Use Python $(pythonVersion)'
 
     - script: |
@@ -75,6 +77,8 @@ stages:
           - task: UsePythonVersion@0
             inputs:
               versionSpec: '$(pythonVersion)'
+              addToPath: true
+              architecture: 'x64'
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
